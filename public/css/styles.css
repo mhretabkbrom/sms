@@ -1,0 +1,58 @@
+.container{
+    background-color: lightgray;
+}
+.text-center{
+    background-color: black;
+   min-height: 20vh;
+   text-align: center;
+   align-items: center;
+   font-size: 30px;
+   color: green;
+}
+.text{
+    background-color: black;
+}
+
+.btn-default{
+    background-color:black;
+    color:white;
+
+}
+.btn-default:hover{
+    background-color: beige;
+
+}
+.col-md-12 th{
+    background-color:black;
+    color: azure;
+}
+
+table, tr, th , td{
+    border: 5px solid green;
+    color:black;
+    font-size: 20px;
+}
+
+
+.text-one:hover{
+    background-color:green;
+
+}
+.tables{
+    width:auto;
+    max-width:15px;
+}
+
+
+
+
+
+@media (max-width:767px){
+    body{
+        background-color: green;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+}
