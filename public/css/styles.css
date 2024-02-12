@@ -2,11 +2,9 @@
     background-color: lightgray;
 }
 .text-center{
-    background-color: black;
-   min-height: 20vh;
    text-align: center;
    align-items: center;
-   font-size: 30px;
+   font-size: 25px;
    color: green;
 }
 .text{

@@ -10,8 +10,13 @@
 
   {{ Form::label('year', 'Year')}}
   {{ Form::number('year', null,['class'=>'form-control'])}}
-  {{ Form::submit('Create New Semester', ['class'=>'btn btn-success btn-lg btn-block'])}}
+  {{ Form::submit('Create New Semester', ['class'=>'btn btn-success btn-lg btn-block', 'style' => 'margin-top:10px;margin-bottom:10px;border:2px solid green;'])}}
   {{ Form::close()}}
+  <div class="row">
+      <div class="col-md-4 ">   
+          <a href="{{route('semesters.index')}}" class="btn btn-primary btn-block"> Go to list</a>
+     </div>
+  </div>
 
 </div>
 </div>

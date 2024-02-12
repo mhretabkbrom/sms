@@ -4,17 +4,17 @@
 <div class="row">
 <div class="col-md-10 ">
   
-<hr style="border :10px solid green;">
+<hr>
 
 </div> 
 <div class="row">
 <div class="col-md-2">
-<a href="{{route('faculties.create')}}" class=" class btn btn-success btn-lg btn-block" style="margin-top:10px; font-size:10px;">Create New FacultyName</a>    
+<a href="{{route('faculties.create')}}" class=" class btn btn-success btn-md btn-block" style="margin-top:10px; font-size:10px;">Create New Faculty</a>    
 </div>  
 </div>
 
 <div class="class-col-md-12 ">
-<hr style="border :10px solid black;">
+<hr>
 
 </div>
 </div>

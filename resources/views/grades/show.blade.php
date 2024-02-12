@@ -5,31 +5,69 @@
 @section('content')
 <div class="row">
   <div class="col-md-8">
-    <h1>Show All</h1>
+    <h1>Grade Details</h1>
 
+    <table class="table">
     @if ($grade->student)
-    <p><strong>First Name </strong>:{{$grade->student->Fname }}</p>
-    <p><strong>Middle Name </strong>:{{$grade->student->Mname }}</p>
-    <p><strong>Last Name </strong>:{{$grade->student->Lname }}</p>
-    <p><strong>Email</strong>:{{$grade->student->email }}</p>
-    <p><strong>Date Of Birth </strong>:{{$grade->student->date_of_birth }}</p>
-    <p><strong>Department id </strong>:{{$grade->student->Department_id}}</p>
+    <tr>
+      <td><p><strong>First Name </strong>:</p></td>
+      <td><p>{{$grade->student->Fname }}</p></td>
+    </tr>
+    <tr>
+      <td><p><strong>Middle Name </strong>:</p></td>
+      <td><p>{{$grade->student->Mname }}</p></td>
+    </tr>
+    <tr>
+      <td><p><strong>Last Name </strong>:</p></td>
+      <td><p>{{$grade->student->Lname }}</p></td>
+    </tr>
+    <tr>
+      <td><p><strong>Email </strong>:</p></td>
+      <td><p>{{$grade->student->email }}</p></td>
+    </tr>
+    <tr>
+      <td><p><strong>Date Of Birth </strong>:</p></td>
+      <td><p>{{$grade->student->date_of_birth }}</p></td>
+    </tr>
+    @if($grade->student->Department)
+    <tr>
+      <td><p><strong>Department </strong>:</p></td>
+      <td><p>{{$grade->student->Department->Name }}</p></td>
+    </tr>
+    @endif
     @endif
 
 
     @if ($grade->course)
-    <p><strong>Course Number</strong>:{{$grade->course->cono }}</p>
-    <p><strong>Course Title</strong>:{{$grade->course->costitle }}</p>
-    <p><strong>Cradit hour</strong>:{{$grade->course->CH }}</p>
+    <tr>
+      <td><p><strong>Course Number </strong>:</p></td>
+      <td><p>{{$grade->course->cono }}</p></td>
+    </tr>
+    <tr>
+      <td><p><strong>Course Title </strong>:</p></td>
+      <td><p>{{$grade->course->costitle }}</p></td>
+    </tr>
+    <tr>
+      <td><p><strong>Cradit hour </strong>:</p></td>
+      <td><p>{{$grade->course->CH }}</p></td>
+    </tr>
      @endif
 
      @if($grade->semester)
-     <p><strong>Semester Name</strong>:{{$grade->semester->semeName }}</p>
-     <p><strong>Year</strong>:{{$grade->semester->year }}</p>
-
+     <tr>
+       <td><p><strong>Semester Name </strong>:</p></td>
+       <td><p>{{$grade->semester->semeName }}</p></td>
+     </tr>
+     <tr>
+       <td><p><strong>Year </strong>:</p></td>
+       <td><p>{{$grade->semester->year }}</p></td>
+     </tr>
      @endif
-
-     <h5><strong>Mark</strong>:{{$grade->Mark}}</h5>
+     <tr>
+      <td><p><strong>Mark </strong>:</p></td>
+      <td><p>{{$grade->Mark }}</p></td>
+    </tr>
+    </table>
   </div>
   <div class="col-md-4">
 <div class="well">

@@ -12,9 +12,13 @@
 
   {{ Form::label('CH', 'C H')}}
   {{ Form::number('CH', null,['class'=>'form-control'])}}
-  {{ Form::submit('Create New  Courses', ['class'=>'btn btn-success btn-lg btn-block'])}}
+  {{ Form::submit('Create New  Courses', ['class'=>'btn btn-success btn-lg btn-block', 'style' => 'margin-top:10px;margin-bottom:10px;'])}}
   {{ Form::close()}}
-
+  <div class="row">
+    <div class="col-md-4 ">   
+        <a href="{{route('courses.index')}}" class="btn btn-primary btn-block"> Back</a>
+   </div>
+</div>
 </div>
 </div>
 

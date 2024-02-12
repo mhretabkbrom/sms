@@ -78,7 +78,7 @@ class StudentsController extends Controller
 
 
         $student->save();
-        Session::flash('success', 'The student name has been success fully Save');
+        Session::flash('success', 'The student name has been success, fully saved');
         return redirect()->route('students.show', $student->student_id);
     }
 
@@ -182,7 +182,7 @@ class StudentsController extends Controller
         $student = Student::find($student_id);
         Storage::delete($student->image);
         $student->delete();
-        Session::flash('successs', 'The student name has been successfully deleted!');
+        Session::flash('successs', 'The student name has been success, fully deleted!');
         return redirect()->route('students.index');
 
 

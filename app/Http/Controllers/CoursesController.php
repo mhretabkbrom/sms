@@ -54,7 +54,7 @@ class CoursesController extends Controller
         $course->CH = $request->CH;
         $course->save();
         Session::flash('success', ' New Courses has been success fully created!');
-        return redirect()->route('courses.show', $course->Course_id);
+        return redirect()->route('courses.index');
 
 
 
@@ -71,8 +71,8 @@ class CoursesController extends Controller
         //
    
 
-$course = Course::find($Course_id);
-return view('courses.show', ['course' => $course]);
+        $course = Course::find($Course_id);
+        return view('courses.show', ['course' => $course]);
     }
 
     /**
@@ -85,7 +85,7 @@ return view('courses.show', ['course' => $course]);
     {
         //
         $course = Course::find($Course_id);
-return view('courses.edit', ['course' => $course]);
+        return view('courses.edit', ['course' => $course]);
     }
 
     /**
@@ -110,8 +110,8 @@ return view('courses.edit', ['course' => $course]);
         $course->costitle = $request->input('costitle');
         $course->CH = $request->input('CH');
         $course->save();
-        Session::flash('success', ' New Courses has been success fully Updated!');
-        return redirect()->route('courses.index');
+        Session::flash('success', ' New Courses has been success, fully updated!');
+        return redirect()->route('courses.show', $course->Course_id);
     }
 
     /**
@@ -125,7 +125,7 @@ return view('courses.edit', ['course' => $course]);
         //
         $course = Course::find($Course_id);
         $course->delete();
-        Session::flash('successs', ' New Courses has been success fully Deleted!');
+        Session::flash('successs', ' New Courses has been success, fully deleted!');
         return redirect()->route('courses.index');
 
     }

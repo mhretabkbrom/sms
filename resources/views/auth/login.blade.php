@@ -11,5 +11,13 @@
         {!! Form::submit('Login', ['class' => 'btn btn-primary btn-lg btn-block']) !!}
         {!! Form::close() !!}
     </div>
+    <div class="col-md-6 col-md-offset-2">
+        <div class="social-auth-links text-center">
+            Have not you an account? <a href="{{url('auth/register')}}">Sign Up</a>
+        </div>
+        <div class="social-auth-links text-center">
+            <a href="{{ url('/password/reset') }}"></i>Forgot password</a>
+        </div>
+    </div>
 </div>
 @endsection

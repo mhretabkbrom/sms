@@ -23,11 +23,10 @@
 {{ Form::file('featured_image')}}
 
 
-
 {{ Form::label('Department_id', 'Department id') }}
 <select class="form-control" name="Department_id">
   @foreach($departments as $department)
-  <option value="{{ $department->Department_id }}">{{ $department->Name }}</option>
+  <option value="{{ $department->Department_id }}" <?= $student->Department_id == $department->Department_id? 'selected': '' ?>>{{ $department->Name }}</option>
   @endforeach
 </select>
 

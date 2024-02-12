@@ -20,7 +20,7 @@
             <br>
             <div class="row">
              <div class="col-md-4 ">   
-            <a href="{{route('faculties.index')}}" class="btn btn-primary btn-block">RollBack</a>
+            <a href="{{route('faculties.index')}}" class="btn btn-primary btn-block"> Go to list</a>
             </div>
             </div>
             {{ Form::close() }}

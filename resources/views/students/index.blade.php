@@ -5,7 +5,7 @@
 <div class="row">
 <div class="col-md-12">
 
-<hr style="border:20px solid black;"><br></br>
+<hr>
 </div>
 </div>
 
@@ -14,7 +14,7 @@
     <hr>
 </div>
 <div class="col-md-2">
-<a href="{{route('students.create')}}" class="btn btn-success btn-lg btn-block" style="font-size:10px">Register New Student</a>
+<a href="{{route('students.create')}}" class="btn btn-success btn-md btn-block" style="font-size:10px">Register New Student</a>
 </div>
 <div class="col-md-12">
 <hr>
@@ -24,7 +24,7 @@
 
 <div class="row">
 <div class="col-md-12">
-    <table class="table">
+<table class="table">
 <thead>
  <tr>
     <th>#</th>
