@@ -52,7 +52,7 @@ class SemesterController extends Controller
         $semester->save();
         Session::flash('success', 'The Semester  Has Been success save!');
 
-        return redirect()->route('semesters.show', $semester->Semester_id);
+        return redirect()->route('semesters.index');
     }
 
     /**
@@ -104,8 +104,8 @@ class SemesterController extends Controller
         $semester->semeName = $request->input('semeName');
         $semester->year = $request->input('year');
         $semester->save();
-        Session::flash('success', 'The Semester  Has Been success Fully Save Update!');
-        return redirect()->route('semesters.index');
+        Session::flash('success', 'The Semester  Has Been success, fully saved Update!');
+        return redirect()->route('semesters.show', $semester->Semester_id);
     }
 
     /**
@@ -120,7 +120,7 @@ class SemesterController extends Controller
         $semester = Semester::find($Semester_id);
         $semester->delete();
 
-        Session::flash('successs', 'The Semester  Has Been success Fully Save Deleted!');
+        Session::flash('successs', 'The Semester  Has Been success, fully saved Deleted!');
         return redirect()->route('semesters.index');
 
     }

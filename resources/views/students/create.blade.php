@@ -32,9 +32,14 @@
           </select>
 
 
-        {{ Form::submit('Create New Student', ['class' => 'btn btn-success btn-lg btn-block', 'style'=>'border:2px solid green;margin-top:10px;']) }}
+        {{ Form::submit('Create New Student', ['class' => 'btn btn-success btn-lg btn-block', 'style'=>'border:2px solid green;margin-top:10px;margin-bottom:10px;']) }}
         
         {{ Form::close() }}
+        <div class="row">
+          <div class="col-md-4 ">   
+              <a href="{{route('students.index')}}" class="btn btn-primary btn-block"> Go to list</a>
+         </div>
+      </div>
     </div>
 </div>
 @endsection

@@ -51,7 +51,7 @@ class DepartmentsController extends Controller
         $department->Faculty_id = $request->Faculty_id;
         // Save the department to the database
         $department->save();
-        Session::flash('success', 'The department has been success Fully Save!');
+        Session::flash('success', 'The department has been success, fully saved!');
         // Redirect to the show method of the DepartmentsController, passing the department ID as a parameter
         return redirect()->route('departments.show', $department->Department_id);
     }
@@ -119,7 +119,7 @@ class DepartmentsController extends Controller
         $department->save();
     
         // Redirect to the show method of the DepartmentsController, passing the department ID as a parameter
-        Session::flash('success', 'The department has been successfully updated!');
+        Session::flash('success', 'The department has been success, fully updated!');
         return redirect()->route('departments.index');
     }
 
@@ -134,7 +134,7 @@ class DepartmentsController extends Controller
         //
         $department = Department::find($Department_id);
         $department->delete();
-        Session::flash('successs', 'The department has been successfully Deleted!');
+        Session::flash('successs', 'The department has been success, fully deleted!');
         return redirect()->route('departments.index');
 
     }

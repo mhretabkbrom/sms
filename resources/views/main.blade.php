@@ -8,7 +8,9 @@
 <div class="container">
 @include('partials._messages')
 
-@yield('content')
+<div class="row" style="min-height: 600px">
+  @yield('content')
+</div>
 @include('partials._footer')
 
 </div>

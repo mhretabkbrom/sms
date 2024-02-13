@@ -60,8 +60,8 @@ class GradesController extends Controller
         $grade->Semester_id = $request->Semester_id;
         $grade->student_id = $request->student_id;
         $grade->save();
-        Session::flash('success', 'The has been success Fully Save!');
-         return redirect()->route('grades.show', $grade->Grade_id);
+        Session::flash('success', 'The has been success, fully saved!');
+         return redirect()->route('grades.index');
 
     }
     
@@ -112,13 +112,13 @@ class GradesController extends Controller
               'student_id'=>'required|integer'
         ));
 
-        $grade = Grade::find($Grade_id);
+        $grade = Grade::find($id);
         $grade->Mark = $request->input('Mark');
         $grade->Course_id = $request->input('Course_id');
         $grade->Semester_id = $request->input('Semester_id');
         $grade->student_id = $request->input('student_id');
         $grade->save();
-        Session::flash('success', 'The has been success Fully Updated!');
+        Session::flash('success', 'The has been success, fully updated!');
          return redirect()->route('grades.show', $grade->Grade_id);
 
 
@@ -137,7 +137,7 @@ class GradesController extends Controller
         //
         $grade = Grade::find($Grade_id);
         $grade->delete();
-        Session::flash('successs', 'The has been success Fully Deleted!');
+        Session::flash('successs', 'The has been success, fully deleted!');
          return redirect()->route('grades.index');
     }
 }

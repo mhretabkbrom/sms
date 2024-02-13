@@ -24,14 +24,18 @@ Route::resource('semesters', 'SemesterController');
 Route::resource('courses', 'CoursesController');
 Route::resource('grades', 'GradesController');
 
-    //authentication.Routes
-          Route::get('auth/login', ['as'=>'login', 'uses'=>'Auth\LoginController@showLoginForm']);
-          Route::post('auth/login', 'Auth\LoginController@login');
-          Route::post('auth/logout', [ 'as'=>'logout','uses'=>'Auth\LoginController@logout']);
-    //Registration Routes
-          Route::get('auth/register', 'Auth\RegisterController@showRegistrationForm');
-          Route::post('auth/register', 'Auth\RegisterController@register');
-
+//authentication.Routes
+Route::get('auth/login', ['as'=>'login', 'uses'=>'Auth\LoginController@showLoginForm']);
+Route::post('auth/login', 'Auth\LoginController@login');
+Route::post('auth/logout', [ 'as'=>'logout','uses'=>'Auth\LoginController@logout']);
+//Registration Routes
+Route::get('auth/register', 'Auth\RegisterController@showRegistrationForm');
+Route::post('auth/register', 'Auth\RegisterController@register');
+//password reset routes
+Route::post('/password/email','Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');        
+Route::get('/password/reset','Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request'); 
+Route::post('/password/reset','Auth\ResetPasswordController@reset');            
+Route::get('/password/reset{token}','Auth\ResetPasswordController@showResetForm')->name('password.reset'); 
 
 
 

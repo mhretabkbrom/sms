@@ -18,8 +18,14 @@
                 <option value="{{ $faculty->Faculty_id}}">{{ $faculty->FacultyName }}</option>
             @endforeach
         </select>
-        {{ Form::submit('Create New Department', ['class' => 'btn btn-success']) }}
+        {{ Form::submit('Create New Department', ['class' => 'btn btn-success btn-lg btn-block', 
+        'style' => 'margin-top:10px;margin-bottom:10px;border:2px solid green;']) }}
         {{ Form::close() }}
+        <div class="row">
+            <div class="col-md-4 ">   
+                <a href="{{route('departments.index')}}" class="btn btn-primary btn-block"> Go to list</a>
+           </div>
+        </div>
     </div>
 </div>
 @endsection

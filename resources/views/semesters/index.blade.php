@@ -6,7 +6,7 @@
 <div class="col-md-10">
 </div>
 <div class="col-md-2">
-    <a href="{{route('semesters.create')}}" class="btn btn-success btn-lg">Create New Student</a>
+    <a href="{{route('semesters.create')}}" class="btn btn-success btn-md">Create New Semester</a>
 </div>
 </div>
 

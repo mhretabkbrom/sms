@@ -21,5 +21,10 @@
 
         {!! Form::close() !!}
     </div>
+    <div class="col-md-6 col-md-offset-2">
+        <div class="social-auth-links text-center">
+            Already have an account? <a href="{{url('auth/login')}}">Sign In</a>
+        </div>
+    </div>
 </div>
 @endsection

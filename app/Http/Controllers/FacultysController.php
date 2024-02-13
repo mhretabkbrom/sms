@@ -96,7 +96,7 @@ class FacultysController extends Controller
         $faculty->FacultyName = $request->input('FacultyName');
         $faculty->save();
     
-        Session::flash('success', 'The new Faculty Name has been successfully Updated.');
+        Session::flash('success', 'The new Faculty Name has been success, fully updated.');
         return redirect()->route('faculties.index');
 
 
@@ -114,7 +114,7 @@ class FacultysController extends Controller
         //
         $faculty = Faculty::find($Faculty_id);
         $faculty->delete();
-        Session::flash('successs', 'Success Fully Deleted');
+        Session::flash('successs', 'Success, fully deleted');
         return redirect()->route('faculties.index');
 
 

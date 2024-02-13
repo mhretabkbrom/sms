@@ -3,16 +3,14 @@
 @section('content')
  <div class="row">
  <div class="col-md-10">
- <hr style="border :50px solid green;">
+ <hr>
  </div>
  <div class="col-md-2">
- <a href="{{route('departments.create')}}" class="btn btn-success btn-lg btn-block"
-  style="margin-top:20px;font-size:10px;color:white;border:
-  2px solid green;min-height:20vh;background-color:black;align-item:center;display:flex;">
-  Create New Department</a>
+  <a href="{{route('departments.create')}}" class=" class btn btn-success btn-md btn-block" style="margin-top:10px; font-size:10px;">Create New Department</a>    
+
  </div>  
 <div class="col-md-12">
-  <hr style="border :50px solid black;">
+  <hr>
  </div>
  </div>
 
